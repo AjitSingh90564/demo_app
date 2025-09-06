@@ -1,14 +1,12 @@
 {
   "name": "my-app",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:my-app": "node dist/my-app/server/server.mjs"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --configuration production --base-href /",
+  "preview": "npx http-server ./dist/my-app -p 8080"
+},
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
